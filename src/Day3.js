@@ -1,4 +1,3 @@
-// Random number generator
 import React from "react"
 import { useState } from "react";
 
@@ -16,12 +15,15 @@ export default function Day3() {
     }
 
     function randomNumGen() {
-        console.log(typeof (startNumber), endNumber, "llll");
+        const start = parseInt(startNumber);
+        const end = parseInt(endNumber);
 
-        if (isNaN(startNumber) || isNaN(endNumber)) {
-            console.log("got");
+        if (isNaN(start) || isNaN(end) || start === 0 || end === 0) {
             setGenerateNum("Invalid Input")
-        };
+        } else {
+            const randomNum = Math.floor(Math.random() * (end - start) + start)
+            setGenerateNum(randomNum)
+        }
     }
 
     return (
