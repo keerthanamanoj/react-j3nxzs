@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import Day1 from './Day1';
+import Day2 from './Day2';
 import './style.css';
 
 export default function App() {
-  const [number, setNumber] = useState(0);
   return (
     <div>
-      <h1>{number}</h1>
-      <button onClick={() => setNumber(number + 10)}>
-        Increment 10 times
-      </button>
+      <Day1 />
+      <Day2 />
     </div>
   );
 }
