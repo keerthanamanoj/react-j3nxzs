@@ -6,8 +6,8 @@ export default function App() {
   return (
     <div>
       <h1>{number}</h1>
-      <button onClick={() => setNumber(number + 3)}>
-        Increment three times
+      <button onClick={() => setNumber(number + 10)}>
+        Increment 10 times
       </button>
     </div>
   );
